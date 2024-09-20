@@ -54,8 +54,7 @@ def scrap_post_by_date(graph_url, date, post_data):
         scrap_post_by_date(next_page,date,post_data)
     return post_data
 
-
-def get_comments_data(comment_url,comment_data):
+def get_comments_data(_self,comment_url,comment_data):
 
     comments = take_data_to_json(comment_url)["data"]
 
@@ -133,13 +132,7 @@ def main():
         get_comments_data(comment_url_full,comment_collected)
 
 
-
-
-        
-
         for comment in comment_collected:
-
-            
 
 
 
